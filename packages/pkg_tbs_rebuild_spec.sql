@@ -1,15 +1,25 @@
 create or replace PACKAGE pkg_tbs_rebuild IS
-   /******************************************************************************
-    *  Package: PKG_TBS_REBUILD
-    *  Purpose:
-    *     - Plan and execute rebuild of segments from one tablespace to another
-    *       using restartable RUN + STEPS model.
-    *     - Create independent runs for:
-    *         * PRIMARY       - main TS migration
-    *         * FIX_UNUSABLE  - rebuild unusable indexes
-    *         * FIX_INVALID   - compile invalid objects
-    *     - Optionally drop empty datafiles after migration.
-    ******************************************************************************/
+   /*
+    ===============================================================================
+    Package      : PKG_TBS_REBUILD
+    Version      : 1.0
+    Developer    : Tomasz Lesinski
+    Date         : 2026-01-22
+    Purpose      : Tablespace rebuild orchestration - plan & execute segment moves
+    Description  : Plan and execute rebuild of segments from one tablespace to
+                   another using restartable RUN + STEPS model. Create
+                   independent runs for PRIMARY (TS migration), FIX_UNUSABLE
+                   (rebuild unusable indexes), FIX_INVALID (compile objects),
+                   and optionally drop empty datafiles after migration.
+    ===============================================================================
+    
+    Change History:
+    ===============================================================================
+    Version    Date         Programmer         Description
+    ===============================================================================
+    1.0        2026-01-22   Tomasz Lesinski    Initial version
+    ===============================================================================
+   */
 
    ---------------------------------------------------------------------------
    -- PUBLIC TYPES / CONSTANTS (jeśli potrzebne na zewnątrz)

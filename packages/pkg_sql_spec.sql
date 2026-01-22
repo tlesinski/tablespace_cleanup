@@ -1,17 +1,21 @@
 CREATE OR REPLACE PACKAGE PKG_SQL AS 
   /*
+    ===============================================================================
     Package      : PKG_SQL
-    Developer    : 
-    Date         : 2024-10-30
-    Purpose      : Sql package
-
+    Version      : 1.1
+    Developer    : Tomasz Lesinski
+    Date         : 2026-01-22
+    Purpose      : SQL execution helpers for dynamic DDL and DML operations
     Prerequisite : MD_PROCESS_LOG, MD_PROCESS_LOG_SEQ data model
-
+    ===============================================================================
+    
     Change History:
-    ------------------------------------------------------------------------------
+    ===============================================================================
     Version    Date         Programmer         Description
-    ------------------------------------------------------------------------------
+    ===============================================================================
     1.0        2024-10-30   Tomasz Lesinski    Initial version
+    1.1        2026-01-22   Tomasz Lesinski    Added version, date, developer info
+    ===============================================================================
   */
 
   /*

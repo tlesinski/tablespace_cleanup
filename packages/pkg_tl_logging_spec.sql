@@ -2,18 +2,25 @@ CREATE OR REPLACE PACKAGE "PKG_TL_LOGGING"
 --AUTHID CURRENT_USER
 authid current_user
 AS
-  -- Package : PKG_TL_LOGGING --
-  -- Developer : --
-  -- Date : 2020-02-24 --
-  -- Purpose : Logging package --
-  -- Prerequisite : MD_PROCESS_LOG, MD_PROCESS_LOG_SEQ data model --
-
-  -- Change History --
-  -- --
-  -- Version Date Programmer Description --
-
-  -- 1.0 2020-02-20 Tomasz, Lesinski Initial version --
-  -- 2.0 2021-12-01 Tomasz, Lesinski Simplification --
+  /*
+    ===============================================================================
+    Package      : PKG_TL_LOGGING
+    Version      : 2.1
+    Developer    : Tomasz Lesinski
+    Date         : 2026-01-22
+    Purpose      : Logging and monitoring for process execution
+    Prerequisite : MD_PROCESS_LOG, MD_PROCESS_LOG_SEQ data model
+    ===============================================================================
+    
+    Change History:
+    ===============================================================================
+    Version    Date         Programmer         Description
+    ===============================================================================
+    1.0        2020-02-20   Tomasz Lesinski    Initial version
+    2.0        2021-12-01   Tomasz Lesinski    Simplification
+    2.1        2026-01-22   Tomasz Lesinski    Added version, date, developer info
+    ===============================================================================
+  */
 
   -- global variables
 
