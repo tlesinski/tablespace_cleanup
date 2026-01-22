@@ -39,3 +39,5 @@ WHERE s.segment_type IN ('TABLE','TABLE PARTITION','TABLE SUBPARTITION')
  AND S.OWNER=T.OWNER
  AND S.segment_name=T.table_name    
  AND NOT EXISTS(SELECT 1 FROM DBA_RECYCLEBIN R WHERE R.OWNER=S.OWNER AND R.object_name=S.segment_name)
+ and (t.iot_type IS NULL OR t.iot_type!='IOT_OVERFLOW');
+ /
